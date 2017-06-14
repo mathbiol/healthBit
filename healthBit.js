@@ -236,24 +236,27 @@ hb.connect=function(){
     h+='<br><button id="connectFitBit" class="btn-primary" onclick="hb.connectFitBit(this)">Connect your fitbit</button> for the selected scopes.'
     h+='</div>'
     // connect your own
+    /*
     h+='<div id="healthBitChoseYourOwn">'
     h+='<h4 style="color:maroon"><li>Chose your own, say for <input id="choseYourOwnInput" type="text" value="heart" size=5 style="color:blue;text-align:center"> monitoring <a  id="choseYourOwnLink" href="https://www.wearable-technologies.com/?s=heart" target="_blank"><i class="fa fa-external-link"></i></a></li></h4>'
     h+='<a href="mailto:jonas.almeida@stonybrookmedicine.edu" target="_blank">Tell us</a> about a device you want to use at Stony Brook Univ, get us one, and we will try to add it here.'
     h+='</div>'
+    */
    
 
     //https://www.wearable-technologies.com/2015/04/wearables-in-healthcare/
 
     hbAction.innerHTML=h
     // even listeners
-    choseYourOwnInput.onkeyup=function(evt){
-        this.size=Math.max(4,this.value.length) // adjust size
-        choseYourOwnLink.href=choseYourOwnLink.href.match(/[^?]*/)[0]+'?s='+this.value
-        if(evt.keyCode==13){
-            choseYourOwnLink.click()
-        }
-        4
-    }
+    
+    //choseYourOwnInput.onkeyup=function(evt){
+    //    this.size=Math.max(4,this.value.length) // adjust size
+    //    choseYourOwnLink.href=choseYourOwnLink.href.match(/[^?]*/)[0]+'?s='+this.value
+    //    if(evt.keyCode==13){
+    //        choseYourOwnLink.click()
+    //    }
+    //    4
+    //}
 }
 
 hb.connectFitBit=function(that){
